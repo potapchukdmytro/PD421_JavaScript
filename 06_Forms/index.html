@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css">
+        <title>Forms</title>
+    </head>
+    <body>
+        <div class="form-container">
+            <form action="#" method="post" onsubmit="formEventHandler(event)">
+                <div class="field-group">
+                    <label>Ваше ім'я</label>
+                    <input id="userName" type="text"/>
+                </div>
+                <div class="field-group">
+                    <label>Пошта</label>
+                    <input name="email" type="email"/>
+                </div>
+                <div class="field-group">
+                    <label>Пароль</label>
+                    <input name="password" type="password"/>
+                </div>
+                <div class="field-group">
+                    <label>Пошук</label>
+                    <input name="search" type="search"/>
+                </div>
+                <div class="field-group">
+                    <label>Телефон</label>
+                    <input name="phone" type="tel" />
+                </div>
+                <div class="field-group">
+                    <label>Число</label>
+                    <input name="number" type="number" />
+                </div>
+                <div class="field-group">
+                    <label>Дата</label>
+                    <input type="date" />
+                </div>
+                <div class="field-group">
+                    <label>Час</label>
+                    <input type="time" />
+                </div>
+                <div class="field-group">
+                    <label>Дата та час</label>
+                    <input type="datetime-local" />
+                </div>
+                <div class="field-group">
+                    <label>Колір</label>
+                    <input type="color" name="textColor" />
+                </div>
+                <div class="field-group">
+                    <label>Діапазон</label>
+                    <input type="range" />
+                </div>
+                <div class="field-group">
+                    <label>Чекбокс</label>
+                    <input type="checkbox" checked />
+                    <input type="checkbox" />
+                    <input type="checkbox" checked />
+                </div>
+                <div class="field-group">
+                    <label>Чекбокс</label>
+                    <input type="checkbox" checked />
+                    <input type="checkbox" />
+                    <input type="checkbox" checked />
+                </div>
+                <div class="field-group">
+                    <label>Показати пароль</label>
+                    <input type="checkbox" name="showPassword" />
+                </div>
+                <div class="field-group">
+                    <label>Жирний текст</label>
+                    <input type="radio" name="radioBtns" value="bold" /><br>
+                    <label>Курсив</label>
+                    <input type="radio" name="radioBtns" value="italic" /><br>
+                    <label>Великий текст</label>
+                    <input type="radio" name="radioBtns" value="big" /><br>
+                    <label>Звичайний текст</label>
+                    <input type="radio" name="radioBtns" value="common" checked />
+                </div>
+                <div class="field-group">
+                    <label>Завантажити файл</label>
+                    <input accept="image/*" onchange="uploadImageHandler(event)" type="file"/>
+                </div>
+                <div>
+                    <button type="submit">Зареєструватися</button>
+                </div>
+            </form>
+            <div>
+                <img id="previewImage" width="500px" hidden alt="image"/>
+            </div>
+        </div>
+        <div class="user-container" id="userInfo">
+
+        </div>
+        <script src="scripts.js"></script>
+    </body>
+</html>
