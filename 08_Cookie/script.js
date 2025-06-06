@@ -189,5 +189,13 @@ function readUserData() {
     }
 }
 
+function redirectUser() {
+    const user = getCookie("userName");
+    if(user && window.location.pathname !== "/login/") {
+        window.location = "/login/";
+    }
+}
+
 printUserName();
 readUserData();
+redirectUser();
