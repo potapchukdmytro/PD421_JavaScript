@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box" id="box">
+        
+    </div>
+    <div style="text-align: center;">
+        <button onclick="onClickTimeoutHandler()">Change color timeout</button>
+    </div>
+    <div style="text-align: center; padding: 10px;">
+        <button style="margin: 5px; background-color: lightgreen;" onclick="onClickIntervalHandler()">Change color interval</button>
+        <button id="btnStopInterval" style="margin: 5px; background-color: lightcoral;">Stop interval</button>
+    </div>
+
+    <div style="text-align: center; padding: 10px;">
+        <input id="role" type="text">
+        <button onclick="checkRoleHandler()">Check role</button>
+    </div>
+
+    <div style="text-align: center;">
+        <img height="640" id="image" src="https://www.datocms-assets.com/132613/1724440968-creditgreenpeace-greatbearrainforest-spruceinterior-2.jpg?w=1200">
+        <br>
+        <button onclick="changeImageSizeHandler(event)">Function</button>
+        <button onclick="changeImageLambda()">Lambda</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
