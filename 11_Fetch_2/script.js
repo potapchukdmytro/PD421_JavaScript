@@ -15,6 +15,7 @@ async function fetchNews() {
             },
         });
         if (!response.ok) {
+            setPagination(0);
             return [];
         }
         const data = await response.json();
@@ -22,6 +23,7 @@ async function fetchNews() {
         return data.articles;
     } catch (error) {
         console.error(error);
+        setPagination(0);
         return [];
     }
 }
@@ -88,6 +90,10 @@ async function paginationHandler(currentPage) {
 }
 
 function getPagination(totalSize, pageSize = 20) {
+    if (totalSize == 0) {
+        return "";
+    }
+
     let pagesHtml = "";
     let pages = Math.ceil(totalSize / pageSize);
 
