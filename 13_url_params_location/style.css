@@ -1,0 +1,4 @@
+.character-row:hover {
+    cursor: pointer;
+    background-color: black;
+}
